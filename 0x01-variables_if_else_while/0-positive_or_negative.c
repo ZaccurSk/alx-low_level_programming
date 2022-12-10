@@ -1,12 +1,17 @@
-include <stdlib.h>
+/*
+ * File: 0-positive_or_negative.c
+ * Auth: Brennan D Baraban
+ */
+
+#include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
 
 /**
- * main - This program uses the function rand() to output
- * random numbers to the screen, then tells the user if it's
- * positive, negative, or a zero.
- * Return: Always 0 (Success)
+ * main - Prints a random number and states whether
+ * it is positive, negative, or zero.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -14,12 +19,13 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+
 	if (n > 0)
 		printf("%d is positive\n", n);
-	else if (n == 0)
-		printf("%d is zero\n", n);
-	else
+	else if (n < 0)
 		printf("%d is negative\n", n);
+	else
+		printf("%d is zero\n", n);
 
 	return (0);
 }
