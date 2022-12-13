@@ -1,26 +1,19 @@
-/*
- * File: 0-putchar.c
- * Auth: ZaccurSk
- *
- */
-
-#include "_putchar"
+#include "holberton.h"
 
 /**
- *  main - Prints "_putchar" followed by a new line.
- *
- *   Return: Always 0.
+ * main - This program prints the phrase Hello, World
+ *  Return: Always 0 (Success)
  */
 int main(void)
 {
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
+	char ch[] = "Holberton";
+	int i;
 
+	for (i = 0; ch[i] != '\0'; i++)
+	{
+		_putchar(ch[i]);
+	}
+
+	_putchar('\n');
 	return (0);
 }
