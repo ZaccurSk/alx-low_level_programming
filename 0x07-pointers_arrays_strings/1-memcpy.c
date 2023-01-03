@@ -1,47 +1,19 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
- *
- * Return: Nothing.
+ * *_memcpy - This function copies memory area
+ * @dest: The destination string to copy to
+ * @src: The source string to copy from
+ * @n: The number of bytes to copy
+ * Return: A pointer to the destination string
  */
-void simple_print_buffer(char *buffer, unsigned int size)
+
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
 
-	 i = 0;
-	 while (i < size)
-	 {
-		 if (i % 10)
-		 {
-			 printf(" ");
-		 }
-		 if (!(i % 10) && i)
-		 {
-			  printf("\n");
-		 }
-		 printf("0x%02x", buffer[i]);
-		 i++;
-	 }
-	 printf("\n");
-}
+	for (i = 0; i < n; i++)
+		dest[i] = src[i];
 
-/**
- * main - check the code for students.
- *
- *  Return: Always 0.
- */
-int main(void)
-{
-	char buffer[98] = {0};
-	char buffer2[98] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
-
-	simple_print_buffer(buffer, 98);
-	_memcpy(buffer + 50, buffer2, 10);
-	printf("-------------------------------------------------\n");
-	simple_print_buffer(buffer, 98);
-	return (0);
+	return (dest);
 }
