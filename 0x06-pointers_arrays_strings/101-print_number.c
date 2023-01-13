@@ -1,4 +1,5 @@
 #include "main.h"
+#include <Stdio.h>
 
 /**
  *  main - check the code
@@ -6,7 +7,7 @@
  *  Return: Always 0.
  */
 
-void print_number(int n)
+void print_number(int n) 
 {
 	unsigned int x;
 
