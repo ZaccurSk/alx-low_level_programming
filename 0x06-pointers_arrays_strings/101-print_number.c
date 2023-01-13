@@ -1,5 +1,4 @@
 #include "main.h"
-#include <Stdio.h>
 
 /**
  *  main - check the code
