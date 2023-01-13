@@ -7,23 +7,23 @@
  * @n: amount of bytes used from src.
  * Return: the pointer to dest.
  */
-
 char *_strncat(char *dest, char *src, int n)
 {
-	int count = 0, count2 = 0;
+	int dlen = 0, j = 0;
 
-	while (*(dest + count) != '\0')
+	while (dest[dlen])
 	{
-		count++;
+		dlen++;
 	}
 
-	while (count2 < n)
+	while (j < n && src[j])
 	{
-		*(dest + count) = *(src + count2);
-		if (*(src + count2) == '\0')
-			break;
-		count++;
-		count2++;
+		dest[dlen] = src[j];
+		dlen++;
+		j++;
 	}
+
+	dest[dlen + n + 1] = '\0';
+
 	return (dest);
-
+}
