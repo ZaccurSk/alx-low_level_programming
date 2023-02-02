@@ -1,12 +1,12 @@
 #include <stdio.h>
-#include "main.h"
+
 /**
- * main - check the code
+ * main - function to print the name of the file it was compiled from
  *
- * Return: Always 0.
+ * Return: 0 for success
  */
 int main(void)
 {
-	puts(__BASE_FILE__);
+	printf("%s\n", __FILE__);
 	return (0);
 }
